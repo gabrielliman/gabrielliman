@@ -1,18 +1,43 @@
-<h1 align="center">Hi!, I'm Gabriel Lima Nunes</h1>
-<h3 align="center">Computer Science Student at Universidade Federal de Minas Gerais</h3>
+# Hi, I'm Gabriel Lima Nunes
 
-- 🔭 I’m currently working on [the analysis of seismic facies through the use of CNNs](https://github.com/gabrielliman/Seismic_Analysis_Tensorflow)
+M.Sc. student in Computer Science (AI) at the **Federal University of Minas Gerais (UFMG)**, Brazil, and research fellow at **Kunumi**.
+I work where **HPC, LLM systems and machine learning** meet: making many models share scarce GPUs, building and evaluating LLM pipelines and agents, and training models that need fewer labels and less compute.
 
-- 💬 Ask me about **Data Science, Python, TensorFlow, CNNs**
+## What I'm working on now
 
-- 📫 How to reach me **gabrielliman2002@gmail.com**
+**Multi-LLM serving on shared GPUs** ([prism-research](https://github.com/gabrielliman/prism-research/tree/vllm-backend)), my M.Sc. research.
+I extend and stress-test [Prism](https://arxiv.org/abs/2505.04021), an open-source system that serves many LLMs on one or more GPUs by time-sharing or splitting memory (SGLang + kvcached). Experiments run on NVIDIA H200 GPUs through a Polyaxon cluster.
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/https://www.linkedin.com/in/gabriel-lima-nunes-969a6b229/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/gabriel-lima-nunes-969a6b229/" height="30" width="40" /></a>
-</p>
+- **vLLM engine backend** with a persistent worker pool and tensor parallelism (TP=2): completed requests went from 62% to **100%** on the 2-GPU example, with latency on par with SGLang.
+- **Model eviction policies** evaluated over 57+ runs on replayed request traces: **p90 TTFT 53 s → 0.6 s** and SLO attainment 51% → 90%. A throughput-per-GB swap policy was the only setup that served 100% of requests in every scenario.
+- **Out-of-memory robustness:** diagnosed five failure modes (crashed workers, OOM server crashes, full stalls) and fixed them on the Prism side, with dead-worker failover in ~4 s, OOM rollback and a cross-process memory arbiter. A memory-pressure scenario went from 70/337 requests with a server crash to **337/337**.
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://kafka.apache.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="kafka" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://opencv.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/> </a> <a href="https://www.sqlite.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="sqlite" width="40" height="40"/> </a> <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a> </p>
+Every experiment has a dated report with the scripts and commands to reproduce it.
 
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=gabrielliman&show_icons=true&locale=en&layout=compact" alt="gabrielliman" /></p>
+## Featured projects
+
+| Project | What it is |
+|---|---|
+| [**prism-research**](https://github.com/gabrielliman/prism-research/tree/vllm-backend) | Research fork of Prism: vLLM backend, eviction policies and memory-robustness fixes for multi-LLM serving. |
+| [**isadg-agents**](https://github.com/gabrielliman/isadg-agents) | Multi-agent pipeline (LangChain) with 4 specialized LLM/VLM agents (vision OCR, semantic router, normalizer, RAG archivist) that catalogs 19th-century documents under the ISAD(G) archival standard. 95–99% word-level OCR accuracy on 917 pages, with retries, self-healing and per-agent latency profiling. |
+| [**VoxLab**](https://github.com/gabrielliman/VoxLab) | Reproducible LLM evaluation of stance-change detection in Brazilian public hearings: a contrast set checked by LLM verifiers, 7 open-weight models × 5 prompting architectures, frozen prompts and a content-hashed response cache so the whole study replays in under a minute with no API calls. |
+| [**seismic-fsss**](https://github.com/gabrielliman/seismic-fsss) | PyTorch pipeline for episodic few-shot segmentation of 3D seismic volumes, with configurable data partitioning and support-selection strategies. |
+| [**Seismic-Segmentation-Framework**](https://github.com/gabrielliman/Seismic-Segmentation-Framework) | TensorFlow benchmark that unifies training and evaluation of deep learning models for seismic facies segmentation. |
+
+## Publications
+
+- **G. L. Nunes** et al. *Spatial Data Partitioning and Support Locality in Few-Shot Seismic Facies Segmentation.* First author, 2026 (submitted).
+- G. Amarante, M. T. P. Souza, **G. Lima** et al. *Enhancing Minority Class Recovery in High Resolution Land Cover Mapping with Dynamic Imbalance Aware Oversampling.* **Scientific Reports**, 2026. [doi:10.1038/s41598-026-52071-z](https://doi.org/10.1038/s41598-026-52071-z)
+- L. M. Laboissiere, **G. L. Nunes**, C. T. Cunha. *Comparability Between Statements of the Same Actor: A Contrast Set for Stance-Change Detection with LLMs.* 1st Kunumi Data Challenge, 2026.
+- **G. Lima** et al. *A Systematic Evaluation Methodology of Deep Learning on Seismic Facies Classification.* First author, **Earth Science Informatics**, 2025. [doi:10.1007/s12145-025-02024-3](https://doi.org/10.1007/s12145-025-02024-3)
+
+## Tools I use
+
+- **LLM systems:** vLLM, SGLang, KV-cache management, tensor parallelism, LangChain, RAG (ChromaDB)
+- **ML:** Python, PyTorch, TensorFlow, sentence-transformers
+- **HPC & infrastructure:** CUDA GPUs, Polyaxon, Docker, Kafka, Linux
+
+## Get in touch
+
+I'm interested in work on **LLM inference and serving, HPC and ML systems**.
+Email: gabrielliman2002@gmail.com
